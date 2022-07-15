@@ -1,0 +1,31 @@
+{
+  "name": "vershy",
+  "version": "0.10.0",
+  "description": "A Eris framework for Discord Bot Development.",
+  "main": "./src/index.js",
+  "typings": "./index.d.ts",
+  "exports": {
+    ".": [
+      {
+        "require": "./index.js",
+        "import": "./esm.mjs"
+      },
+      "./index.js"
+    ],
+    "./esm": "./esm.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andgyk/vershy.git"
+  },
+  "keywords": ["discord", "eris", "framework", "bot", "api", "client"],
+  "author": "andgyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andgyk/vershy/issues"
+  },
+  "private": false,
+  "dependencies": {
+    "eris": "^0.17.1"
+  }
+}
