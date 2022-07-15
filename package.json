@@ -1,6 +1,6 @@
 {
   "name": "vershy",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "A Eris framework for Discord Bot Development.",
   "main": "./src/index.js",
   "typings": "./index.d.ts",
