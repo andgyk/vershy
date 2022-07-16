@@ -28,6 +28,10 @@ class Listener {
         this.type = type;
     };
 
+    check (...args) {
+        return true;
+    };
+
     /**
      * This method will be called on listener emitting
      * @param  {...any} args The parameters of the listeners

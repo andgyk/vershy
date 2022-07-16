@@ -22,12 +22,20 @@ class ListenerHandler extends VershyHandler {
 
             if (li.name) {
                 if (Boolean(li.once)) {
-                    type.once(li.name, (...args) => li.exec(...args));
+                    type.once(li.name, (...args) => ListenerHandler.exec(li, ...args));
                 } else {
-                    type.on(li.name, (...args) => li.exec(...args));
+                    type.on(li.name, (...args) => ListenerHandler.exec(li, ...args));
                 };
             };
         };
+    };
+
+    static async exec (listener, ...args) {
+        if ((await listener.check(...args)) != true) {
+            return;
+        };
+
+        return listener.exec(...args);
     };
 };
 
